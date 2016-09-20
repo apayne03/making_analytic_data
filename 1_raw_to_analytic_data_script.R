@@ -30,3 +30,13 @@ install.packages("psych",dep=T)
 psych::describe(extroversion_items)
 
 psych::describe(agreeableness_items)
+
+agreeableness_items
+
+is_bad_value <- agreeableness_items<1 | agreeableness_items>5
+
+View(is_bad_value)
+
+agreeableness_items[is_bad_value] <- NA
+
+View(agreeableness_items)
